@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="alert alert-danger" style="margin: 1%">
+    <strong>Error!</strong> {{ msg }}
+  </div>
+  <form action={{ url_for( url ) }}>
+    <button class="btn btn-primary" style="margin:1%">Go back</button>
+  </form>
+{% endblock %}

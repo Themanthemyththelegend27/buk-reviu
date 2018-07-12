@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block options %}
+  <a class="nav-item nav-link" href="/">Search <span class="sr-only">(current)</span></a>
+{% endblock %}
+
+{% block content %}
+  <div class="alert alert-success" style="margin:1%">
+    <strong>Success!</strong> {{ msg }}
+  </div>
+{% endblock %}

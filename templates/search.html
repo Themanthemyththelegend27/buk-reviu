@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block options %}
+  <a class="nav-item nav-link" href="/search">Search</a>
+  <a class="nav-item nav-link" href="/logout">Log out</a>
+{% endblock %}
+
+{% block content %}
+  <form style="margin:1%" action={{ url_for('search') }} method="post">
+    <div class="form-group">
+      <input type="text" name="search" class="form-control col-sm-3" placeholder="ISBN, Title or Author">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block options %}
+  <a class="nav-item nav-link" href="/search">Search</a>
+  <a class="nav-item nav-link" href="/logout">Log out</a>
+{% endblock %}
+
+{% block content %}
+  {% if result == []%}
+    <div class="alert alert-danger" role="alert">
+      No results found.
+    </div>
+  {% endif %}
+
+  <ol>
+    {% for row in result %}
+      <br>
+        <li>
+          <a href="{{ url_for('bookinfo', title=row.title, author=row.author, year=row.year, isbn=row.isbn) }}"> {{ row.title }}  </a>
+          by {{ row.author }}
+        </li>
+    {% endfor %}
+  </ol>
+{% endblock %}
